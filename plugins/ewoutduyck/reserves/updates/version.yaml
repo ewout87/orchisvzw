@@ -1,0 +1,35 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table ewoutduyck_reserves_reserves'
+    - builder_table_create_ewoutduyck_reserves_reserves.php
+1.0.3:
+    - 'Created table ewoutduyck_reserves_categories'
+    - builder_table_create_ewoutduyck_reserves_categories.php
+1.0.4:
+    - 'Updated table ewoutduyck_reserves_reserves'
+    - builder_table_update_ewoutduyck_reserves_reserves.php
+1.0.5:
+    - 'Updated table ewoutduyck_reserves_categories'
+    - builder_table_update_ewoutduyck_reserves_categories.php
+1.0.6:
+    - 'Updated table ewoutduyck_reserves_reserves'
+    - builder_table_update_ewoutduyck_reserves_reserves_2.php
+1.0.7:
+    - 'Updated table ewoutduyck_reserves_reserves'
+    - builder_table_update_ewoutduyck_reserves_reserves_3.php
+1.0.8:
+    - 'Updated table ewoutduyck_reserves_reserves'
+    - builder_table_update_ewoutduyck_reserves_reserves_4.php
+1.0.9:
+    - 'Updated table ewoutduyck_reserves_reserves'
+    - builder_table_update_ewoutduyck_reserves_reserves_5.php
+1.0.10:
+    - 'Updated table ewoutduyck_reserves_reserves'
+    - builder_table_update_ewoutduyck_reserves_reserves_6.php
+1.0.11:
+    - 'Updated table ewoutduyck_reserves_reserves'
+    - builder_table_update_ewoutduyck_reserves_reserves_7.php
+1.0.12:
+    - 'Updated table ewoutduyck_reserves_reserves'
+    - builder_table_update_ewoutduyck_reserves_reserves_8.php

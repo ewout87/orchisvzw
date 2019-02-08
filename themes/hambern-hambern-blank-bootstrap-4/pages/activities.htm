@@ -1,0 +1,30 @@
+title = "Activiteiten"
+url = "/activiteiten"
+layout = "default"
+is_hidden = 0
+
+[eventList]
+eventsPerPage = 10
+noEventMessage = "No events."
+calendar = 1
+eventPage = "{{ activity }}"
+==
+<div class="container m-b-3">
+<div class="page-description">
+    <p>{{ this.page.description }}</p>
+    <hr>
+</div>
+
+<div>
+{% for event in events %}
+    <div class="list-item">
+        <h3 class="title"><a href="{{ event.url }}">{{event.name}}</a></h3>
+        <p>{{event.calendar.name}}</p>
+            <p class="time"><i class="fa fa-clock-o"></i> {{event.start_at | date('D d M, H:i')}}</p>
+            {% if event.address is not empty %}
+            <p class="location"><i class="fa fa-map-marker"></i> {{event.address}}</p>
+            {% endif %}
+    </div>
+{% endfor %}
+</div>
+</div>

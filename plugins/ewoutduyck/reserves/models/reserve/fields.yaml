@@ -1,0 +1,39 @@
+fields:
+    name:
+        label: Name
+        span: auto
+        type: text
+    slug:
+        label: Slug
+        span: auto
+        type: text
+tabs:
+    fields:
+        description:
+            label: Description
+            size: ''
+            span: auto
+            type: richeditor
+            tab: 'Tab 1'
+        images:
+            label: Images
+            mode: file
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: auto
+            type: fileupload
+            tab: 'Tab 1'
+secondaryTabs:
+    fields:
+        manager:
+            label: Manager
+            span: auto
+            type: text
+            tab: Manage
+        location:
+            label: Location
+            span: auto
+            type: text
+            tab: Manage

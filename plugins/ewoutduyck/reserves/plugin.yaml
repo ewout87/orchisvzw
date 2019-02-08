@@ -1,0 +1,11 @@
+plugin:
+    name: 'ewoutduyck.reserves::lang.plugin.name'
+    description: 'ewoutduyck.reserves::lang.plugin.description'
+    author: 'Ewout Duyck'
+    icon: oc-icon-tree
+    homepage: ''
+navigation:
+    main-menu-item2:
+        label: Reserves
+        url: ewoutduyck/reserves/reserves
+        icon: icon-tree

@@ -1,0 +1,29 @@
+description = "Gebieden getoond op Home"
+==
+<div class="natuurgebieden-carousel">
+<h2>Ontdek onze natuurgebieden</h2>
+    <div class="carousel">
+     {% for record in records %}
+     <div class="container">
+         {% if record.images.count %}
+               {% for image in record.images|slice(0, 1) %}
+                    <div>
+                      <a href="{{ image.path }}">
+                         <img class="img-responsive" data-src="{{ image.filename }}" src="{{ image.path }}" alt="{{ image.description != null ? image.description : image.filename }}" title="{{ image.title != null ? image.title : record.name }}">
+                      </a>
+                    </div>
+               {% endfor %}    
+         {% endif %}
+             <div class="overlay">
+                 <h3><small>{{ record.location }}</small></h3>
+                 <h3>{{ record.name }}</h3>
+                 <button class="read-more-button">Toon</button>
+             </div>
+                 {% if detailsPage %}
+                        <a class="read-more-link" href="{{ detailsPage|page({ (detailsUrlParameter): attribute(record, detailsKeyColumn) }) }}"></a>
+                {% endif %}
+
+    </div>
+   {% endfor %}
+    </div>
+</div>

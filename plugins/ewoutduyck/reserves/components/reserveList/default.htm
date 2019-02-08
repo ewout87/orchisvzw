@@ -1,0 +1,14 @@
+{% set posts = __SELF__.posts %}
+
+<ul class="reserve-list">
+    {% for reserve in reserves %}
+        <li>
+            <h3><a href="{{ reserve.url }}">{{ reserve.name }}</a></h3>
+
+            <p class="excerpt">{{ reserve.excerpt|raw }}</p>
+        </li>
+    {% else %}
+        <li class="no-data">Geen natuurgebieden</li>
+    {% endfor %}
+</ul>
+

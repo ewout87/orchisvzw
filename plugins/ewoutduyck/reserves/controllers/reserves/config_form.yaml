@@ -1,0 +1,10 @@
+name: Reserves
+modelClass: EwoutDuyck\Reserves\Models\Reserve
+form: $/ewoutduyck/reserves/models/reserve/fields.yaml
+defaultRedirect: ewoutduyck/reserves/reserves
+create:
+    redirect: 'ewoutduyck/reserves/reserves/update/:id'
+    redirectClose: ewoutduyck/reserves/reserves
+update:
+    redirect: ewoutduyck/reserves/reserves
+    redirectClose: ewoutduyck/reserves/reserves

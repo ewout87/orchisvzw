@@ -1,0 +1,104 @@
+1549581143a:1:{s:12:"opinions.htm";a:11:{s:8:"fileName";s:12:"opinions.htm";s:7:"content";s:2200:"title = "Opinies"
+url = "/opinies"
+layout = "default"
+description = "Orchis vzw neemt regelmatig standpunten in aangaande het beleid  van Natuur- en milieu. Zo geeft Orchis veel aandacht aan de ontwikkeling structuurplannen, provinciale en gemeentelijke ruimtelijke uitvoeringsplannen, wijzigingen van gewestplannen, illegale ingrepen in natuurgebieden en aantasting van het leefmilieu."
+is_hidden = 0
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+categoryFilter = "opinie"
+postsPerPage = 10
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "opinion"
+postPage = "opinion"
+==
+<div class="container m-b-3">
+<div class="page-description">
+    <p>{{ this.page.description }}</p>
+    <hr>
+</div>
+
+    {% for post in posts %}
+        <div class="list-item">
+            <h3>{{ post.title }}</h3>
+
+            <p class="info">
+                Posted
+                {% if post.categories.count %} in {% endif %}
+                {% for category in post.categories %}
+                    <a href="{{ category.url }}">{{ category.name }}</a>{% if not loop.last %}, {% endif %}
+                {% endfor %}
+                on {{ post.published_at|date('M d, Y') }}
+            </p>
+            
+            <p class="excerpt">{{ post.summary|raw }}</p>
+            <a href="{{ post.url }}">Lees meer ></a>
+        </div>
+    {% else %}
+        <div class="no-data">{{ noPostsMessage }}</div>
+    {% endfor %}
+
+
+{% if posts.lastPage > 1 %}
+    <ul class="pagination">
+        {% if posts.currentPage > 1 %}
+            <li><a href="{{ this.page.baseFileName|page({ (pageParam): (posts.currentPage-1) }) }}">&larr; Prev</a></li>
+        {% endif %}
+
+        {% for page in 1..posts.lastPage %}
+            <li class="{{ posts.currentPage == page ? 'active' : null }}">
+                <a href="{{ this.page.baseFileName|page({ (pageParam): page }) }}">{{ page }}</a>
+            </li>
+        {% endfor %}
+
+        {% if posts.lastPage > posts.currentPage %}
+            <li><a href="{{ this.page.baseFileName|page({ (pageParam): (posts.currentPage+1) }) }}">Next &rarr;</a></li>
+        {% endif %}
+    </ul>
+{% endif %}
+</div>";s:5:"mtime";i:1549123795;s:6:"markup";s:1584:"<div class="container m-b-3">
+<div class="page-description">
+    <p>{{ this.page.description }}</p>
+    <hr>
+</div>
+
+    {% for post in posts %}
+        <div class="list-item">
+            <h3>{{ post.title }}</h3>
+
+            <p class="info">
+                Posted
+                {% if post.categories.count %} in {% endif %}
+                {% for category in post.categories %}
+                    <a href="{{ category.url }}">{{ category.name }}</a>{% if not loop.last %}, {% endif %}
+                {% endfor %}
+                on {{ post.published_at|date('M d, Y') }}
+            </p>
+            
+            <p class="excerpt">{{ post.summary|raw }}</p>
+            <a href="{{ post.url }}">Lees meer ></a>
+        </div>
+    {% else %}
+        <div class="no-data">{{ noPostsMessage }}</div>
+    {% endfor %}
+
+
+{% if posts.lastPage > 1 %}
+    <ul class="pagination">
+        {% if posts.currentPage > 1 %}
+            <li><a href="{{ this.page.baseFileName|page({ (pageParam): (posts.currentPage-1) }) }}">&larr; Prev</a></li>
+        {% endif %}
+
+        {% for page in 1..posts.lastPage %}
+            <li class="{{ posts.currentPage == page ? 'active' : null }}">
+                <a href="{{ this.page.baseFileName|page({ (pageParam): page }) }}">{{ page }}</a>
+            </li>
+        {% endfor %}
+
+        {% if posts.lastPage > posts.currentPage %}
+            <li><a href="{{ this.page.baseFileName|page({ (pageParam): (posts.currentPage+1) }) }}">Next &rarr;</a></li>
+        {% endif %}
+    </ul>
+{% endif %}
+</div>";s:4:"code";N;s:5:"title";s:7:"Opinies";s:3:"url";s:8:"/opinies";s:6:"layout";s:7:"default";s:11:"description";s:317:"Orchis vzw neemt regelmatig standpunten in aangaande het beleid  van Natuur- en milieu. Zo geeft Orchis veel aandacht aan de ontwikkeling structuurplannen, provinciale en gemeentelijke ruimtelijke uitvoeringsplannen, wijzigingen van gewestplannen, illegale ingrepen in natuurgebieden en aantasting van het leefmilieu.";s:9:"is_hidden";s:1:"0";s:9:"blogPosts";a:7:{s:10:"pageNumber";s:11:"{{ :page }}";s:14:"categoryFilter";s:6:"opinie";s:12:"postsPerPage";s:2:"10";s:14:"noPostsMessage";s:14:"No posts found";s:9:"sortOrder";s:17:"published_at desc";s:12:"categoryPage";s:7:"opinion";s:8:"postPage";s:7:"opinion";}}}

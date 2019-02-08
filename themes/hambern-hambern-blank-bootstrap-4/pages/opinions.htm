@@ -1,0 +1,60 @@
+title = "Opinies"
+url = "/opinies"
+layout = "default"
+description = "Orchis vzw neemt regelmatig standpunten in aangaande het beleid  van Natuur- en milieu. Zo geeft Orchis veel aandacht aan de ontwikkeling structuurplannen, provinciale en gemeentelijke ruimtelijke uitvoeringsplannen, wijzigingen van gewestplannen, illegale ingrepen in natuurgebieden en aantasting van het leefmilieu."
+is_hidden = 0
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+categoryFilter = "opinie"
+postsPerPage = 10
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "opinion"
+postPage = "opinion"
+==
+<div class="container m-b-3">
+<div class="page-description">
+    <p>{{ this.page.description }}</p>
+    <hr>
+</div>
+
+    {% for post in posts %}
+        <div class="list-item">
+            <h3>{{ post.title }}</h3>
+
+            <p class="info">
+                Posted
+                {% if post.categories.count %} in {% endif %}
+                {% for category in post.categories %}
+                    <a href="{{ category.url }}">{{ category.name }}</a>{% if not loop.last %}, {% endif %}
+                {% endfor %}
+                on {{ post.published_at|date('M d, Y') }}
+            </p>
+            
+            <p class="excerpt">{{ post.summary|raw }}</p>
+            <a href="{{ post.url }}">Lees meer ></a>
+        </div>
+    {% else %}
+        <div class="no-data">{{ noPostsMessage }}</div>
+    {% endfor %}
+
+
+{% if posts.lastPage > 1 %}
+    <ul class="pagination">
+        {% if posts.currentPage > 1 %}
+            <li><a href="{{ this.page.baseFileName|page({ (pageParam): (posts.currentPage-1) }) }}">&larr; Prev</a></li>
+        {% endif %}
+
+        {% for page in 1..posts.lastPage %}
+            <li class="{{ posts.currentPage == page ? 'active' : null }}">
+                <a href="{{ this.page.baseFileName|page({ (pageParam): page }) }}">{{ page }}</a>
+            </li>
+        {% endfor %}
+
+        {% if posts.lastPage > posts.currentPage %}
+            <li><a href="{{ this.page.baseFileName|page({ (pageParam): (posts.currentPage+1) }) }}">Next &rarr;</a></li>
+        {% endif %}
+    </ul>
+{% endif %}
+</div>

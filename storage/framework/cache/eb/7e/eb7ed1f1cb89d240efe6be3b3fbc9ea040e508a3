@@ -1,0 +1,29 @@
+1549581143a:1:{s:18:"primary-navbar.htm";a:7:{s:8:"fileName";s:18:"primary-navbar.htm";s:7:"content";s:567:"description = "Navigation bar"
+
+[viewBag]
+==
+<section id="navbar" class="primary-navbar">
+	<nav class="navbar">
+		<div class="container">
+			<a class="navbar-brand" href="{{ 'home'|page }}">Orchis</a>
+			<div class="nav navbar-nav pull-xs-right">
+			<form class="form-inline">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              </form>
+            </ul>
+		</div>
+	</nav>
+</section>";s:5:"mtime";i:1548587219;s:6:"markup";s:518:"<section id="navbar" class="primary-navbar">
+	<nav class="navbar">
+		<div class="container">
+			<a class="navbar-brand" href="{{ 'home'|page }}">Orchis</a>
+			<div class="nav navbar-nav pull-xs-right">
+			<form class="form-inline">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              </form>
+            </ul>
+		</div>
+	</nav>
+</section>";s:4:"code";N;s:11:"description";s:14:"Navigation bar";s:7:"viewBag";a:0:{}}}

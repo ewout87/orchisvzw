@@ -1,0 +1,27 @@
+==
+<section id="navbar" class="secondary-navbar">
+	<nav class="navbar">
+		<div class="container">
+			<ul class="nav navbar-nav pull-xs-right">
+				<li class="nav-item{{ this.page.baseFileName == 'activities' ? ' active' }}">
+					<a class="nav-link" href="{{ 'activities'|page }}">Activiteiten</a>
+				</li>
+				<li class="nav-item{{ this.page.baseFileName == 'opinions' ? ' active' }}">
+					<a class="nav-link" href="{{ 'opinions'|page }}">Opinies</a>
+				</li>
+				<li class="nav-item{{ this.page.baseFileName == 'about' ? ' active' }}">
+					<a class="nav-link" href="{{ 'about'|page }}">Over ons</a>
+				</li>
+				<li class="nav-item{{ this.page.baseFileName == 'contact' ? ' active' }}">
+					<a class="nav-link" href="{{ 'contact'|page }}">Contact</a>
+				</li>
+				<li class="nav-item{{ this.page.baseFileName == 'reserves' ? ' active' }}">
+					<a class="nav-link" href="{{ 'reserves'|page }}">Natuurgebieden</a>
+				</li>
+				<li class="nav-item{{ this.page.baseFileName == 'membership' ? ' active' }}">
+					<a class="nav-link" href="{{ 'membership'|page }}">Wordt lid</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+</section>

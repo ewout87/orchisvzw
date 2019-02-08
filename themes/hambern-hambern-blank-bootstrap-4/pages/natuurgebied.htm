@@ -1,0 +1,41 @@
+title = "Natuurgebied"
+url = "/natuurgebied/:id"
+layout = "default"
+is_hidden = 0
+
+[builderDetails]
+modelClass = "EwoutDuyck\Reserves\Models\Reserve"
+identifierValue = "{{ :id }}"
+modelKeyColumn = "id"
+displayColumn = "name"
+notFoundMessage = "Record not found"
+==
+<div class="container m-b-3">
+{% if record %}
+    <div class="row">
+        <div class="col-md-6">
+            <h2>{{ record.name }}</h2>
+            <h2><small>{{ record.location}} </small></h2>
+             <br>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div>{{ record.description_html|raw }}</div>
+        </div>
+        <div class="col-md-6">
+            {% if record.images.count %}
+                   {% for image in record.images %}
+                        <div class="col-md-4">
+                          <a href="{{ image.path }}" data-toggle="lightbox" data-gallery="example-gallery">
+                             <img class="img-responsive" data-src="{{ image.filename }}" src="{{ image.path }}" alt="{{ image.description != null ? image.description : image.filename }}" title="{{ image.title != null ? image.title : record.name }}">
+                          </a>
+                        </div>
+                   {% endfor %}    
+             {% endif %}
+        </div>
+    </div>
+    {% else %}
+    {{ notFoundMessage }}
+    {% endif %}
+</div>

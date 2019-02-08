@@ -1,0 +1,24 @@
+1549581143a:1:{s:12:"partners.htm";a:9:{s:8:"fileName";s:12:"partners.htm";s:7:"content";s:348:"title = "Partners"
+url = "/partners"
+layout = "default"
+is_hidden = 0
+==
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            {% content 'partners.htm' %}
+        </div>
+        <div class="col-md-4">
+            <img src="./storage/app/media/werkingsgebied.jpg" />
+        </div>
+    </div>
+</div>";s:5:"mtime";i:1547763842;s:6:"markup";s:270:"<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            {% content 'partners.htm' %}
+        </div>
+        <div class="col-md-4">
+            <img src="./storage/app/media/werkingsgebied.jpg" />
+        </div>
+    </div>
+</div>";s:4:"code";N;s:5:"title";s:8:"Partners";s:3:"url";s:9:"/partners";s:6:"layout";s:7:"default";s:9:"is_hidden";s:1:"0";}}

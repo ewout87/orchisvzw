@@ -1,0 +1,12 @@
+1549581142a:1:{s:12:"activity.htm";a:10:{s:8:"fileName";s:12:"activity.htm";s:7:"content";s:159:"title = "Activiteit"
+url = "/activiteit/:id"
+layout = "default"
+is_hidden = 0
+
+[event]
+==
+<div class="container m-b-3">
+{% component 'event' %}
+</div>";s:5:"mtime";i:1549123784;s:6:"markup";s:62:"<div class="container m-b-3">
+{% component 'event' %}
+</div>";s:4:"code";N;s:5:"title";s:10:"Activiteit";s:3:"url";s:15:"/activiteit/:id";s:6:"layout";s:7:"default";s:9:"is_hidden";s:1:"0";s:5:"event";a:0:{}}}

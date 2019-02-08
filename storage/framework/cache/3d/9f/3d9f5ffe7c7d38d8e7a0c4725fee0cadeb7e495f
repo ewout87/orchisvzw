@@ -1,0 +1,66 @@
+1549581142a:1:{s:8:"home.htm";a:13:{s:8:"fileName";s:8:"home.htm";s:7:"content";s:1557:"title = "Home"
+url = "/"
+layout = "default"
+description = "Als erkende regionale natuur- en milieuvereniging zet Orchis vzw zich, via talrijke vrijwilligers, in voor de bescherming en het behoud van natuur en leefmilieu in de provincie Limburg. Vooral in de regio Zuid-Limburg en het Maasland heeft Orchis verschillende natuurgebieden in eigendom of in huur, waar een ecologisch verantwoord beheer gevoerd wordt. Orchis organiseert natuurwandelingen, educatieve beheerwerken en natuurprojecten voor jong en oud. Ook voor advies in verband met natuur- en milieuproblemen kan je bij ons aankloppen."
+is_hidden = 0
+
+[builderList]
+modelClass = "EwoutDuyck\Reserves\Models\Reserve"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "name"
+noRecordsMessage = "No records found"
+detailsPage = "natuurgebied"
+detailsKeyColumn = "id"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+
+[eventList]
+eventsPerPage = 10
+noEventMessage = "No events."
+calendar = 1
+eventPage = "events/event"
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+postsPerPage = 1
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "about"
+postPage = "about"
+==
+<?php
+function onEnd()
+{
+    // Optional - set the page title to the post title
+        $this->page->title = "Welkom";
+}
+?>
+==
+<div class="home">
+<div class="page-description container m-b-3">
+    <p>{{ this.page.description }}</p>
+</div>
+
+    {% partial 'carousel' %}
+    
+    {% partial 'activiteiten' %}
+    
+    {% partial 'showcase' %}
+    
+</div>";s:5:"mtime";i:1549135496;s:6:"markup";s:236:"<div class="home">
+<div class="page-description container m-b-3">
+    <p>{{ this.page.description }}</p>
+</div>
+
+    {% partial 'carousel' %}
+    
+    {% partial 'activiteiten' %}
+    
+    {% partial 'showcase' %}
+    
+</div>";s:4:"code";s:118:"function onEnd()
+{
+    // Optional - set the page title to the post title
+        $this->page->title = "Welkom";
+}";s:5:"title";s:4:"Home";s:3:"url";s:1:"/";s:6:"layout";s:7:"default";s:11:"description";s:537:"Als erkende regionale natuur- en milieuvereniging zet Orchis vzw zich, via talrijke vrijwilligers, in voor de bescherming en het behoud van natuur en leefmilieu in de provincie Limburg. Vooral in de regio Zuid-Limburg en het Maasland heeft Orchis verschillende natuurgebieden in eigendom of in huur, waar een ecologisch verantwoord beheer gevoerd wordt. Orchis organiseert natuurwandelingen, educatieve beheerwerken en natuurprojecten voor jong en oud. Ook voor advies in verband met natuur- en milieuproblemen kan je bij ons aankloppen.";s:9:"is_hidden";s:1:"0";s:11:"builderList";a:9:{s:10:"modelClass";s:34:"EwoutDuyck\Reserves\Models\Reserve";s:5:"scope";s:1:"-";s:10:"scopeValue";s:12:"{{ :scope }}";s:13:"displayColumn";s:4:"name";s:16:"noRecordsMessage";s:16:"No records found";s:11:"detailsPage";s:12:"natuurgebied";s:16:"detailsKeyColumn";s:2:"id";s:19:"detailsUrlParameter";s:2:"id";s:10:"pageNumber";s:11:"{{ :page }}";}s:9:"eventList";a:4:{s:13:"eventsPerPage";s:2:"10";s:14:"noEventMessage";s:10:"No events.";s:8:"calendar";s:1:"1";s:9:"eventPage";s:12:"events/event";}s:9:"blogPosts";a:6:{s:10:"pageNumber";s:11:"{{ :page }}";s:12:"postsPerPage";s:1:"1";s:14:"noPostsMessage";s:14:"No posts found";s:9:"sortOrder";s:17:"published_at desc";s:12:"categoryPage";s:5:"about";s:8:"postPage";s:5:"about";}}}

@@ -1,0 +1,16 @@
+title = "Opinie"
+url = "/opinie/:slug"
+layout = "default"
+is_hidden = 0
+
+[blogPost]
+slug = "{{ :slug }}"
+categoryPage = "opinion"
+==
+<div class="container m-b-3">
+{% if post %}
+    {% component 'blogPost' %}
+{% else %}
+    <h2>Opinie niet gevonden</h2>
+{% endif %}
+</div>

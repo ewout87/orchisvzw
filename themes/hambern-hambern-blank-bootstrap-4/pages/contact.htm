@@ -1,0 +1,19 @@
+title = "Contact"
+url = "/contact"
+layout = "default"
+description = "Wil je kennismaken met Orchis, wens je de wandelkalender, voel je er iets voor om samen met Orchis in de natuur te duiken, geef gerust een seintje!"
+is_hidden = 0
+
+[contactForm]
+injectBootstrapAssets = 1
+injectMainScript = 1
+==
+<div class="container m-b-3">
+    <div class="page-description">
+        <p>{{ this.page.description }}</p>
+        <div>
+        {% component 'contactForm' %}
+        </div>
+        <hr>
+    </div>
+</div>

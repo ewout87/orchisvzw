@@ -1,0 +1,59 @@
+title = "Natuurgebieden"
+url = "/natuurgebieden"
+layout = "default"
+description = "De natuurterreinen die Orchis vzw beheert, zijn deels eigendom en deels in huur. Orchis vzw is in 14 gebieden actief. Ze liggen verspreid in Maaseik, Maasmechelen, Lanaken, Bilzen, Hoeselt, Riemst en Zutendaal."
+is_hidden = 0
+
+[builderList]
+modelClass = "EwoutDuyck\Reserves\Models\Reserve"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "name"
+noRecordsMessage = "No records found"
+detailsPage = "natuurgebied"
+detailsKeyColumn = "id"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+==
+<div class="container">
+<div class="page-description">
+    <p>{{ this.page.description }}</p>
+    <hr>
+</div>
+
+   <div id="map"></div>
+    
+
+
+
+<div class="row">
+   {% for record in records %}
+      <div class="col-md-4">
+         <div class="teaser">
+         {% if record.images.count %}
+            <div id="post-list-featured-images-top">
+               {% for image in record.images|slice(0, 1) %}
+                  <a href="{{ image.path }}">
+                     <img class="img-responsive" data-src="{{ image.filename }}" src="{{ image.path }}" alt="{{ image.description != null ? image.description : image.filename }}" title="{{ image.title != null ? image.title : record.name }}">
+                  </a>
+               {% endfor %}
+            </div>
+         {% endif %}
+
+        <div class="teaser-content">
+             <h3 class="post-list-title p-name" itemprop="headline">
+                {{ record.name }}
+             </h3>
+             <p>{{ post.summary }}</p>
+             <button class="read-more-button">Lees meer</button>
+             {% if detailsPage %}
+                    <a class="read-more-link" href="{{ detailsPage|page({ (detailsUrlParameter): attribute(record, detailsKeyColumn) }) }}"></a>
+                {% endif %}
+         </div>
+         </div>
+      </div>
+   {% else %}
+      <div class="no-post-message">{{ noPostsMessage }}</div>
+   {% endfor %}
+<div class="row">
+<div class="container">
