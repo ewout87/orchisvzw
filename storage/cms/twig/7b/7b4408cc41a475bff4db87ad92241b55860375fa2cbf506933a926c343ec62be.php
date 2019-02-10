@@ -42,56 +42,64 @@ class __TwigTemplate_630ceb4b377f4ddde6bddd2e5355f639b01404cad0ceb43a84ffe2e5278
     <link rel=\"stylesheet\" type=\"text/css\" href=\"//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css\"/>
     <!-- Add the slick-theme.css if you want default styling -->
     <link rel=\"stylesheet\" type=\"text/css\" href=\"//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css\"/>
+    <!-- leaflet styling -->
+    <link rel=\"stylesheet\" href=\"https://unpkg.com/leaflet@1.4.0/dist/leaflet.css\"
+    integrity=\"sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==\"
+    crossorigin=\"\"/>
+     <!-- Make sure you put this AFTER Leaflet's CSS -->
+     <script src=\"https://unpkg.com/leaflet@1.4.0/dist/leaflet.js\"
+   integrity=\"sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg==\"
+   crossorigin=\"\"></script>
   </head>
   <body>
 
 \t";
-        // line 24
+        // line 32
         $context['__cms_partial_params'] = [];
         echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("primary-navbar"        , $context['__cms_partial_params']        , true        );
         unset($context['__cms_partial_params']);
-        // line 25
+        // line 33
         echo "\t
 \t";
-        // line 26
+        // line 34
         $context['__cms_partial_params'] = [];
         echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("secondary-navbar"        , $context['__cms_partial_params']        , true        );
         unset($context['__cms_partial_params']);
-        // line 27
-        echo "
-  ";
-        // line 28
-        $context['__cms_partial_params'] = [];
-        echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("header"        , $context['__cms_partial_params']        , true        );
-        unset($context['__cms_partial_params']);
-        // line 29
-        echo "
-  <section id=\"page\" class=\"\">
-    ";
-        // line 31
-        echo $this->env->getExtension('Cms\Twig\Extension')->pageFunction();
-        // line 32
-        echo "  </section>
-  
-  ";
-        // line 34
-        $context['__cms_partial_params'] = [];
-        echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("footer"        , $context['__cms_partial_params']        , true        );
-        unset($context['__cms_partial_params']);
         // line 35
-        echo "  
+        echo "
   ";
         // line 36
         $context['__cms_partial_params'] = [];
-        echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("disclaimer"        , $context['__cms_partial_params']        , true        );
+        echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("header"        , $context['__cms_partial_params']        , true        );
         unset($context['__cms_partial_params']);
         // line 37
+        echo "
+  <section id=\"page\" class=\"\">
+    ";
+        // line 39
+        echo $this->env->getExtension('Cms\Twig\Extension')->pageFunction();
+        // line 40
+        echo "  </section>
+  
+  ";
+        // line 42
+        $context['__cms_partial_params'] = [];
+        echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("footer"        , $context['__cms_partial_params']        , true        );
+        unset($context['__cms_partial_params']);
+        // line 43
+        echo "  
+  ";
+        // line 44
+        $context['__cms_partial_params'] = [];
+        echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("disclaimer"        , $context['__cms_partial_params']        , true        );
+        unset($context['__cms_partial_params']);
+        // line 45
         echo "  <script src=\"";
         echo $this->extensions['Cms\Twig\Extension']->themeFilter(array(0 => "assets/vendor/jquery/dist/jquery.min.js", 1 => "assets/vendor/tether/dist/js/tether.min.js", 2 => "assets/vendor/bootstrap/dist/js/bootstrap.min.js", 3 => "assets/vendor/wow/dist/wow.min.js", 4 => "assets/vendor/holderjs/holder.min.js", 5 => "assets/vendor/plyr/dist/plyr.js", 6 => "assets/js/scripts.js"));
-        // line 45
+        // line 53
         echo "\"></script>
     ";
-        // line 46
+        // line 54
         $_minify = System\Classes\CombineAssets::instance()->useMinify;
         if ($_minify) {
             echo '<script src="'. Request::getBasePath()
@@ -106,17 +114,16 @@ class __TwigTemplate_630ceb4b377f4ddde6bddd2e5355f639b01404cad0ceb43a84ffe2e5278
         echo '<link rel="stylesheet" property="stylesheet" href="'. Request::getBasePath()
                     .'/modules/system/assets/css/framework.extras'.($_minify ? '-min' : '').'.css">'.PHP_EOL;
         unset($_minify);
-        // line 47
+        // line 55
         echo "    ";
         echo $this->env->getExtension('Cms\Twig\Extension')->assetsFunction('js');
         echo $this->env->getExtension('Cms\Twig\Extension')->displayBlock('scripts');
-        // line 48
+        // line 56
         echo "    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js\" integrity=\"sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4\" crossorigin=\"anonymous\"></script>
     <script src=\"https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js\"></script>
     <script src=\"https://cdnjs.cloudflare.com/ajax/libs/anchor-js/3.2.1/anchor.min.js\"></script>
     <script type=\"text/javascript\" src=\"//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js\"></script>
-    <script src=\"https://maps.googleapis.com/maps/api/js?key=AIzaSyCHpdolrM3NUpQHxuUmXYVbXiE2DHj4JNM&callback=initMap\"
-    async defer></script>
+
   </script>
   </body>
 </html>";
@@ -134,7 +141,7 @@ class __TwigTemplate_630ceb4b377f4ddde6bddd2e5355f639b01404cad0ceb43a84ffe2e5278
 
     public function getDebugInfo()
     {
-        return array (  114 => 48,  110 => 47,  95 => 46,  92 => 45,  89 => 37,  85 => 36,  82 => 35,  78 => 34,  74 => 32,  72 => 31,  68 => 29,  64 => 28,  61 => 27,  57 => 26,  54 => 25,  50 => 24,  39 => 15,  36 => 14,  33 => 13,  31 => 7,  23 => 1,);
+        return array (  122 => 56,  118 => 55,  103 => 54,  100 => 53,  97 => 45,  93 => 44,  90 => 43,  86 => 42,  82 => 40,  80 => 39,  76 => 37,  72 => 36,  69 => 35,  65 => 34,  62 => 33,  58 => 32,  39 => 15,  36 => 14,  33 => 13,  31 => 7,  23 => 1,);
     }
 
     public function getSourceContext()
@@ -159,6 +166,14 @@ class __TwigTemplate_630ceb4b377f4ddde6bddd2e5355f639b01404cad0ceb43a84ffe2e5278
     <link rel=\"stylesheet\" type=\"text/css\" href=\"//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css\"/>
     <!-- Add the slick-theme.css if you want default styling -->
     <link rel=\"stylesheet\" type=\"text/css\" href=\"//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css\"/>
+    <!-- leaflet styling -->
+    <link rel=\"stylesheet\" href=\"https://unpkg.com/leaflet@1.4.0/dist/leaflet.css\"
+    integrity=\"sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==\"
+    crossorigin=\"\"/>
+     <!-- Make sure you put this AFTER Leaflet's CSS -->
+     <script src=\"https://unpkg.com/leaflet@1.4.0/dist/leaflet.js\"
+   integrity=\"sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg==\"
+   crossorigin=\"\"></script>
   </head>
   <body>
 
@@ -190,8 +205,7 @@ class __TwigTemplate_630ceb4b377f4ddde6bddd2e5355f639b01404cad0ceb43a84ffe2e5278
     <script src=\"https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js\"></script>
     <script src=\"https://cdnjs.cloudflare.com/ajax/libs/anchor-js/3.2.1/anchor.min.js\"></script>
     <script type=\"text/javascript\" src=\"//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js\"></script>
-    <script src=\"https://maps.googleapis.com/maps/api/js?key=AIzaSyCHpdolrM3NUpQHxuUmXYVbXiE2DHj4JNM&callback=initMap\"
-    async defer></script>
+
   </script>
   </body>
 </html>", "C:\\xampp\\htdocs\\orchisvzw/themes/hambern-hambern-blank-bootstrap-4/layouts/default.htm", "");

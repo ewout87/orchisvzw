@@ -4,16 +4,36 @@ layout = "default"
 description = "Wil je kennismaken met Orchis, wens je de wandelkalender, voel je er iets voor om samen met Orchis in de natuur te duiken, geef gerust een seintje!"
 is_hidden = 0
 
-[contactForm]
-injectBootstrapAssets = 1
-injectMainScript = 1
+[LeafletMap]
+coords = "50.889202, 5.526453"
+zoom = 16
+markerCoords = "50.889202, 5.526453"
+markerText = "Orchis vzw"
+scrollProtection = "true"
 ==
 <div class="container m-b-3">
     <div class="page-description">
         <p>{{ this.page.description }}</p>
-        <div>
-        {% component 'contactForm' %}
-        </div>
-        <hr>
     </div>
+    <div class="row">
+        <div class="col-md-6">
+            <h2>Natuurcentrum</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            {% content 'natuurcentrum' %}
+        </div>
+        <div class="col-md-6 ">
+            <div id="leafmap"></div>
+            {% component 'LeafletMap' %}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <h2>Contactinformatie</h2>
+        </div>
+    </div>
+        {% content 'contactinformatie' %}
+
 </div>

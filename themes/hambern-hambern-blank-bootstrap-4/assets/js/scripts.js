@@ -32,14 +32,7 @@ $(document).ready(function () {
       ]
     });
 });
-    //map
-     var map;
-      function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: 50.8894934, lng: 5.5272793},
-          zoom: 11
-        });
-      }
+
 
     //lightbox
     $(document).on('click', '[data-toggle="lightbox"]', function(event) {

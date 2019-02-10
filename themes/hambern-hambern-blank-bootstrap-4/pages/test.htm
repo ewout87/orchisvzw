@@ -1,0 +1,15 @@
+title = "Test"
+url = "/test"
+is_hidden = 0
+
+[reserveList]
+modelClass = "EwoutDuyck\Reserves\Models\Reserve"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "coordinates"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+==
+{% component 'reserveList' %}

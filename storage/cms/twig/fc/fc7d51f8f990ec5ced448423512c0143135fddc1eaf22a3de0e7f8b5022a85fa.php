@@ -26,7 +26,9 @@ class __TwigTemplate_a41e06cde3300f5a12c6c01516f859802d4977493148daf81e91c003bdf
 \t\t\t<a class=\"navbar-brand\" href=\"";
         // line 4
         echo $this->extensions['Cms\Twig\Extension']->pageFilter("home");
-        echo "\">Orchis</a>
+        echo "\">
+\t\t\t    <img src=\"./storage/app/media/logo_kl.png\" />
+\t\t\t</a>
 \t\t\t<div class=\"nav navbar-nav pull-xs-right\">
 \t\t\t<form class=\"form-inline\">
                 <input class=\"form-control mr-sm-2\" type=\"search\" placeholder=\"Search\" aria-label=\"Search\">
@@ -58,7 +60,9 @@ class __TwigTemplate_a41e06cde3300f5a12c6c01516f859802d4977493148daf81e91c003bdf
         return new Twig_Source("<section id=\"navbar\" class=\"primary-navbar\">
 \t<nav class=\"navbar\">
 \t\t<div class=\"container\">
-\t\t\t<a class=\"navbar-brand\" href=\"{{ 'home'|page }}\">Orchis</a>
+\t\t\t<a class=\"navbar-brand\" href=\"{{ 'home'|page }}\">
+\t\t\t    <img src=\"./storage/app/media/logo_kl.png\" />
+\t\t\t</a>
 \t\t\t<div class=\"nav navbar-nav pull-xs-right\">
 \t\t\t<form class=\"form-inline\">
                 <input class=\"form-control mr-sm-2\" type=\"search\" placeholder=\"Search\" aria-label=\"Search\">

@@ -2,7 +2,7 @@
 
 use Lang;
 use Cms\Classes\ComponentBase;
-use RainLab\Builder\Classes\ComponentHelper;;
+use RainLab\Builder\Classes\ComponentHelper;
 use SystemException;
 
 class RecordDetails extends ComponentBase

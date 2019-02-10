@@ -20,46 +20,70 @@ class __TwigTemplate_12a771edb70959ea8c37706204bc33b50c19c800d238d929e3402d969f5
     protected function doDisplay(array $context, array $blocks = array())
     {
         // line 1
-        echo "<div class=\"container\">
-<div class=\"page-description\">
+        echo "<div class=\"page-description\">
     <p>";
-        // line 3
+        // line 2
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", array()), "description", array()), "html", null, true);
         echo "</p>
-    <hr>
 </div>
-
    <div id=\"map\"></div>
+    <script>
+
+        var map = L.map('map')
+        var i, x = '';
+        var coordinates = ";
+        // line 9
+        echo json_encode(($context["records"] ?? null));
+        echo ";
+        var url = '";
+        // line 10
+        echo twig_escape_filter($this->env, ($context["detailsPage"] ?? null), "html", null, true);
+        echo "';
     
-
-
-
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            scrollWheelZoom: false,
+            attribution: '&copy; <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors', 
+            maxZoom: 18
+        }).addTo(map);
+        
+        
+        for (i in coordinates) {
+            x += L.marker([coordinates[i].latitude, coordinates[i].longitude]).addTo(map)
+            .bindPopup('<a href=\"' + url + '/' + coordinates[i].id + '\">' + coordinates[i].name + '</a>')
+            .openPopup();
+        }
+        
+        map.setView([50.889202, 5.526453], 11);
+        
+    </script>
+   
+<div class=\"container\">
 <div class=\"row\">
    ";
-        // line 13
+        // line 31
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["records"] ?? null));
         $context['_iterated'] = false;
         foreach ($context['_seq'] as $context["_key"] => $context["record"]) {
-            // line 14
+            // line 32
             echo "      <div class=\"col-md-4\">
          <div class=\"teaser\">
          ";
-            // line 16
+            // line 34
             if (twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["record"], "images", array()), "count", array())) {
-                // line 17
+                // line 35
                 echo "            <div id=\"post-list-featured-images-top\">
                ";
-                // line 18
+                // line 36
                 $context['_parent'] = $context;
                 $context['_seq'] = twig_ensure_traversable(twig_slice($this->env, twig_get_attribute($this->env, $this->source, $context["record"], "images", array()), 0, 1));
                 foreach ($context['_seq'] as $context["_key"] => $context["image"]) {
-                    // line 19
+                    // line 37
                     echo "                  <a href=\"";
                     echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["image"], "path", array()), "html", null, true);
                     echo "\">
                      <img class=\"img-responsive\" data-src=\"";
-                    // line 20
+                    // line 38
                     echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["image"], "filename", array()), "html", null, true);
                     echo "\" src=\"";
                     echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["image"], "path", array()), "html", null, true);
@@ -74,34 +98,30 @@ class __TwigTemplate_12a771edb70959ea8c37706204bc33b50c19c800d238d929e3402d969f5
                 $_parent = $context['_parent'];
                 unset($context['_seq'], $context['_iterated'], $context['_key'], $context['image'], $context['_parent'], $context['loop']);
                 $context = array_intersect_key($context, $_parent) + $_parent;
-                // line 23
+                // line 41
                 echo "            </div>
          ";
             }
-            // line 25
+            // line 43
             echo "
         <div class=\"teaser-content\">
              <h3 class=\"post-list-title p-name\" itemprop=\"headline\">
                 ";
-            // line 28
+            // line 46
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["record"], "name", array()), "html", null, true);
             echo "
              </h3>
-             <p>";
-            // line 30
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["post"] ?? null), "summary", array()), "html", null, true);
-            echo "</p>
              <button class=\"read-more-button\">Lees meer</button>
              ";
-            // line 32
+            // line 49
             if (($context["detailsPage"] ?? null)) {
-                // line 33
+                // line 50
                 echo "                    <a class=\"read-more-link\" href=\"";
                 echo $this->extensions['Cms\Twig\Extension']->pageFilter(($context["detailsPage"] ?? null), array(($context["detailsUrlParameter"] ?? null) => twig_get_attribute($this->env, $this->source, $context["record"], ($context["detailsKeyColumn"] ?? null))));
                 echo "\"></a>
                 ";
             }
-            // line 35
+            // line 52
             echo "         </div>
          </div>
       </div>
@@ -109,7 +129,7 @@ class __TwigTemplate_12a771edb70959ea8c37706204bc33b50c19c800d238d929e3402d969f5
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 39
+            // line 56
             echo "      <div class=\"no-post-message\">";
             echo twig_escape_filter($this->env, ($context["noPostsMessage"] ?? null), "html", null, true);
             echo "</div>
@@ -118,9 +138,9 @@ class __TwigTemplate_12a771edb70959ea8c37706204bc33b50c19c800d238d929e3402d969f5
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['record'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 41
-        echo "<div class=\"row\">
-<div class=\"container\">";
+        // line 58
+        echo "</div>
+</div>";
     }
 
     public function getTemplateName()
@@ -135,22 +155,40 @@ class __TwigTemplate_12a771edb70959ea8c37706204bc33b50c19c800d238d929e3402d969f5
 
     public function getDebugInfo()
     {
-        return array (  122 => 41,  113 => 39,  105 => 35,  99 => 33,  97 => 32,  92 => 30,  87 => 28,  82 => 25,  78 => 23,  63 => 20,  58 => 19,  54 => 18,  51 => 17,  49 => 16,  45 => 14,  40 => 13,  27 => 3,  23 => 1,);
+        return array (  142 => 58,  133 => 56,  125 => 52,  119 => 50,  117 => 49,  111 => 46,  106 => 43,  102 => 41,  87 => 38,  82 => 37,  78 => 36,  75 => 35,  73 => 34,  69 => 32,  64 => 31,  40 => 10,  36 => 9,  26 => 2,  23 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Twig_Source("<div class=\"container\">
-<div class=\"page-description\">
+        return new Twig_Source("<div class=\"page-description\">
     <p>{{ this.page.description }}</p>
-    <hr>
 </div>
-
    <div id=\"map\"></div>
+    <script>
+
+        var map = L.map('map')
+        var i, x = '';
+        var coordinates = {{ records|json_encode()|raw }};
+        var url = '{{ detailsPage }}';
     
-
-
-
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            scrollWheelZoom: false,
+            attribution: '&copy; <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors', 
+            maxZoom: 18
+        }).addTo(map);
+        
+        
+        for (i in coordinates) {
+            x += L.marker([coordinates[i].latitude, coordinates[i].longitude]).addTo(map)
+            .bindPopup('<a href=\"' + url + '/' + coordinates[i].id + '\">' + coordinates[i].name + '</a>')
+            .openPopup();
+        }
+        
+        map.setView([50.889202, 5.526453], 11);
+        
+    </script>
+   
+<div class=\"container\">
 <div class=\"row\">
    {% for record in records %}
       <div class=\"col-md-4\">
@@ -169,7 +207,6 @@ class __TwigTemplate_12a771edb70959ea8c37706204bc33b50c19c800d238d929e3402d969f5
              <h3 class=\"post-list-title p-name\" itemprop=\"headline\">
                 {{ record.name }}
              </h3>
-             <p>{{ post.summary }}</p>
              <button class=\"read-more-button\">Lees meer</button>
              {% if detailsPage %}
                     <a class=\"read-more-link\" href=\"{{ detailsPage|page({ (detailsUrlParameter): attribute(record, detailsKeyColumn) }) }}\"></a>
@@ -180,7 +217,7 @@ class __TwigTemplate_12a771edb70959ea8c37706204bc33b50c19c800d238d929e3402d969f5
    {% else %}
       <div class=\"no-post-message\">{{ noPostsMessage }}</div>
    {% endfor %}
-<div class=\"row\">
-<div class=\"container\">", "C:\\xampp\\htdocs\\orchisvzw/themes/hambern-hambern-blank-bootstrap-4/pages/reserves.htm", "");
+</div>
+</div>", "C:\\xampp\\htdocs\\orchisvzw/themes/hambern-hambern-blank-bootstrap-4/pages/reserves.htm", "");
     }
 }

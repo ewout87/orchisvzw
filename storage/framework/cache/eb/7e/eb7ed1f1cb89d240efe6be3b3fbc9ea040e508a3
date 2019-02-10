@@ -1,11 +1,13 @@
-1549581143a:1:{s:18:"primary-navbar.htm";a:7:{s:8:"fileName";s:18:"primary-navbar.htm";s:7:"content";s:567:"description = "Navigation bar"
+1549837498a:1:{s:18:"primary-navbar.htm";a:7:{s:8:"fileName";s:18:"primary-navbar.htm";s:7:"content";s:620:"description = "Navigation bar"
 
 [viewBag]
 ==
 <section id="navbar" class="primary-navbar">
 	<nav class="navbar">
 		<div class="container">
-			<a class="navbar-brand" href="{{ 'home'|page }}">Orchis</a>
+			<a class="navbar-brand" href="{{ 'home'|page }}">
+			    <img src="./storage/app/media/logo_kl.png" />
+			</a>
 			<div class="nav navbar-nav pull-xs-right">
 			<form class="form-inline">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -14,10 +16,12 @@
             </ul>
 		</div>
 	</nav>
-</section>";s:5:"mtime";i:1548587219;s:6:"markup";s:518:"<section id="navbar" class="primary-navbar">
+</section>";s:5:"mtime";i:1549836267;s:6:"markup";s:571:"<section id="navbar" class="primary-navbar">
 	<nav class="navbar">
 		<div class="container">
-			<a class="navbar-brand" href="{{ 'home'|page }}">Orchis</a>
+			<a class="navbar-brand" href="{{ 'home'|page }}">
+			    <img src="./storage/app/media/logo_kl.png" />
+			</a>
 			<div class="nav navbar-nav pull-xs-right">
 			<form class="form-inline">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">

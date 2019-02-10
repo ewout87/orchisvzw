@@ -1,27 +1,64 @@
-1549581142a:1:{s:11:"contact.htm";a:11:{s:8:"fileName";s:11:"contact.htm";s:7:"content";s:520:"title = "Contact"
+1549837594a:1:{s:11:"contact.htm";a:11:{s:8:"fileName";s:11:"contact.htm";s:7:"content";s:1063:"title = "Contact"
 url = "/contact"
 layout = "default"
 description = "Wil je kennismaken met Orchis, wens je de wandelkalender, voel je er iets voor om samen met Orchis in de natuur te duiken, geef gerust een seintje!"
 is_hidden = 0
 
-[contactForm]
-injectBootstrapAssets = 1
-injectMainScript = 1
+[LeafletMap]
+coords = "50.889202, 5.526453"
+zoom = 16
+markerCoords = "50.889202, 5.526453"
+markerText = "Orchis vzw"
+scrollProtection = "true"
 ==
 <div class="container m-b-3">
     <div class="page-description">
         <p>{{ this.page.description }}</p>
-        <div>
-        {% component 'contactForm' %}
-        </div>
-        <hr>
     </div>
-</div>";s:5:"mtime";i:1549123871;s:6:"markup";s:213:"<div class="container m-b-3">
+    <div class="row">
+        <div class="col-md-6">
+            <h2>Natuurcentrum</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            {% content 'natuurcentrum' %}
+        </div>
+        <div class="col-md-6 ">
+            <div id="leafmap"></div>
+            {% component 'LeafletMap' %}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <h2>Contactinformatie</h2>
+        </div>
+    </div>
+        {% content 'contactinformatie' %}
+
+</div>";s:5:"mtime";i:1549836991;s:6:"markup";s:671:"<div class="container m-b-3">
     <div class="page-description">
         <p>{{ this.page.description }}</p>
-        <div>
-        {% component 'contactForm' %}
-        </div>
-        <hr>
     </div>
-</div>";s:4:"code";N;s:5:"title";s:7:"Contact";s:3:"url";s:8:"/contact";s:6:"layout";s:7:"default";s:11:"description";s:147:"Wil je kennismaken met Orchis, wens je de wandelkalender, voel je er iets voor om samen met Orchis in de natuur te duiken, geef gerust een seintje!";s:9:"is_hidden";s:1:"0";s:11:"contactForm";a:2:{s:21:"injectBootstrapAssets";s:1:"1";s:16:"injectMainScript";s:1:"1";}}}
+    <div class="row">
+        <div class="col-md-6">
+            <h2>Natuurcentrum</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            {% content 'natuurcentrum' %}
+        </div>
+        <div class="col-md-6 ">
+            <div id="leafmap"></div>
+            {% component 'LeafletMap' %}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <h2>Contactinformatie</h2>
+        </div>
+    </div>
+        {% content 'contactinformatie' %}
+
+</div>";s:4:"code";N;s:5:"title";s:7:"Contact";s:3:"url";s:8:"/contact";s:6:"layout";s:7:"default";s:11:"description";s:147:"Wil je kennismaken met Orchis, wens je de wandelkalender, voel je er iets voor om samen met Orchis in de natuur te duiken, geef gerust een seintje!";s:9:"is_hidden";s:1:"0";s:10:"LeafletMap";a:5:{s:6:"coords";s:19:"50.889202, 5.526453";s:4:"zoom";s:2:"16";s:12:"markerCoords";s:19:"50.889202, 5.526453";s:10:"markerText";s:10:"Orchis vzw";s:16:"scrollProtection";s:4:"true";}}}

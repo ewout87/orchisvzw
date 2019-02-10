@@ -1,4 +1,4 @@
-1549581143a:1:{s:11:"opinion.htm";a:10:{s:8:"fileName";s:11:"opinion.htm";s:7:"content";s:286:"title = "Opinie"
+1549837497a:1:{s:11:"opinion.htm";a:10:{s:8:"fileName";s:11:"opinion.htm";s:7:"content";s:286:"title = "Opinie"
 url = "/opinie/:slug"
 layout = "default"
 is_hidden = 0

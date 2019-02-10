@@ -1,4 +1,4 @@
-1549580704a:1:{s:16:"activiteiten.htm";a:6:{s:8:"fileName";s:16:"activiteiten.htm";s:7:"content";s:786:"description = "Activiteiten getoond op Home"
+1549836261a:1:{s:16:"activiteiten.htm";a:6:{s:8:"fileName";s:16:"activiteiten.htm";s:7:"content";s:704:"description = "Activiteiten getoond op Home"
 ==
 <div class="activiteiten container m-b-3">
     <div class="row" >
@@ -6,7 +6,6 @@
         {% for event in events %}
         <div class="col-md-4">
                 <h3 class="title">{{event.name}}</h3>
-                    <p><i class="fas fa-hiking"></i> {{event.calendar.name}}</p>
                     <p class="time"><i class="far fa-calendar-alt"></i> {{event.start_at | date('D d M, H:i')}}</p>
                     {% if event.address is not empty %}
                     <p class="location"><i class="fas fa-map-marker-alt"></i> {{event.address}}</p>
@@ -15,13 +14,12 @@
         </div>
         {% endfor %}
     </div>
-    </div>";s:5:"mtime";i:1549134876;s:6:"markup";s:736:"<div class="activiteiten container m-b-3">
+    </div>";s:5:"mtime";i:1549835658;s:6:"markup";s:654:"<div class="activiteiten container m-b-3">
     <div class="row" >
     <h2>Duik de natuur in!</h2>
         {% for event in events %}
         <div class="col-md-4">
                 <h3 class="title">{{event.name}}</h3>
-                    <p><i class="fas fa-hiking"></i> {{event.calendar.name}}</p>
                     <p class="time"><i class="far fa-calendar-alt"></i> {{event.start_at | date('D d M, H:i')}}</p>
                     {% if event.address is not empty %}
                     <p class="location"><i class="fas fa-map-marker-alt"></i> {{event.address}}</p>

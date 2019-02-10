@@ -6,7 +6,6 @@ description = "Activiteiten getoond op Home"
         {% for event in events %}
         <div class="col-md-4">
                 <h3 class="title">{{event.name}}</h3>
-                    <p><i class="fas fa-hiking"></i> {{event.calendar.name}}</p>
                     <p class="time"><i class="far fa-calendar-alt"></i> {{event.start_at | date('D d M, H:i')}}</p>
                     {% if event.address is not empty %}
                     <p class="location"><i class="fas fa-map-marker-alt"></i> {{event.address}}</p>

@@ -15,17 +15,35 @@ detailsKeyColumn = "id"
 detailsUrlParameter = "id"
 pageNumber = "{{ :page }}"
 ==
-<div class="container">
 <div class="page-description">
     <p>{{ this.page.description }}</p>
-    <hr>
 </div>
-
    <div id="map"></div>
+    <script>
+
+        var map = L.map('map')
+        var i, x = '';
+        var coordinates = {{ records|json_encode()|raw }};
+        var url = '{{ detailsPage }}';
     
-
-
-
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            scrollWheelZoom: false,
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors', 
+            maxZoom: 18
+        }).addTo(map);
+        
+        
+        for (i in coordinates) {
+            x += L.marker([coordinates[i].latitude, coordinates[i].longitude]).addTo(map)
+            .bindPopup('<a href="' + url + '/' + coordinates[i].id + '">' + coordinates[i].name + '</a>')
+            .openPopup();
+        }
+        
+        map.setView([50.889202, 5.526453], 11);
+        
+    </script>
+   
+<div class="container">
 <div class="row">
    {% for record in records %}
       <div class="col-md-4">
@@ -44,7 +62,6 @@ pageNumber = "{{ :page }}"
              <h3 class="post-list-title p-name" itemprop="headline">
                 {{ record.name }}
              </h3>
-             <p>{{ post.summary }}</p>
              <button class="read-more-button">Lees meer</button>
              {% if detailsPage %}
                     <a class="read-more-link" href="{{ detailsPage|page({ (detailsUrlParameter): attribute(record, detailsKeyColumn) }) }}"></a>
@@ -55,5 +72,5 @@ pageNumber = "{{ :page }}"
    {% else %}
       <div class="no-post-message">{{ noPostsMessage }}</div>
    {% endfor %}
-<div class="row">
-<div class="container">
+</div>
+</div>

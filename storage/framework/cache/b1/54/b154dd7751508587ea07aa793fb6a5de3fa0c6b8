@@ -1,4 +1,4 @@
-1549581173a:1:{s:11:"default.htm";a:6:{s:8:"fileName";s:11:"default.htm";s:7:"content";s:2635:"==
+1549837497a:1:{s:11:"default.htm";a:6:{s:8:"fileName";s:11:"default.htm";s:7:"content";s:3006:"==
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -19,6 +19,14 @@
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"/>
     <!-- Add the slick-theme.css if you want default styling -->
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"/>
+    <!-- leaflet styling -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+    integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+    crossorigin=""/>
+     <!-- Make sure you put this AFTER Leaflet's CSS -->
+     <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+   integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+   crossorigin=""></script>
   </head>
   <body>
 
@@ -50,11 +58,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/3.2.1/anchor.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCHpdolrM3NUpQHxuUmXYVbXiE2DHj4JNM&callback=initMap"
-    async defer></script>
+
   </script>
   </body>
-</html>";s:5:"mtime";i:1549579931;s:6:"markup";s:2631:"<!DOCTYPE html>
+</html>";s:5:"mtime";i:1549810477;s:6:"markup";s:3002:"<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -74,6 +81,14 @@
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"/>
     <!-- Add the slick-theme.css if you want default styling -->
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"/>
+    <!-- leaflet styling -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+    integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+    crossorigin=""/>
+     <!-- Make sure you put this AFTER Leaflet's CSS -->
+     <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+   integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+   crossorigin=""></script>
   </head>
   <body>
 
@@ -105,8 +120,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/3.2.1/anchor.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCHpdolrM3NUpQHxuUmXYVbXiE2DHj4JNM&callback=initMap"
-    async defer></script>
+
   </script>
   </body>
 </html>";s:4:"code";N;s:17:"_PARSER_ERROR_INI";s:0:"";}}

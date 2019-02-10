@@ -166,4 +166,13 @@
   'pollozen\\simplegallery\\Controllers\\gallery' => 'plugins\\pollozen\\simplegallery\\controllers\\gallery.php',
   'PolloZen\\SimpleGallery\\Components\\Gallery' => 'plugins\\pollozen\\simplegallery\\components\\Gallery.php',
   'PolloZen\\SimpleGallery\\Components\\Galleries' => 'plugins\\pollozen\\simplegallery\\components\\Galleries.php',
+  'Rainlab\\Builder\\Components\\RecordDetails' => 'plugins\\rainlab\\builder\\components\\RecordDetails.php',
+  'EwoutDuyck\\Reserves\\Components\\reserveDetails' => 'plugins\\ewoutduyck\\reserves\\components\\reserveDetails.php',
+  'Rainlab\\Builder\\Components\\RecordList' => 'plugins\\rainlab\\builder\\components\\RecordList.php',
+  'EwoutDuyck\\Reserves\\Components\\reserveList' => 'plugins\\ewoutduyck\\reserves\\components\\reserveList.php',
+  'ewoutduyck\\reserves\\Components\\ReserveList' => 'plugins\\ewoutduyck\\reserves\\components\\ReserveList.php',
+  'bedard\\debugbar\\Plugin' => 'plugins\\bedard\\debugbar\\Plugin.php',
+  'ewoutduyck\\reserves\\Components\\ReserveDetails' => 'plugins\\ewoutduyck\\reserves\\components\\ReserveDetails.php',
+  'redmarlin\\leafletmap\\Plugin' => 'plugins\\redmarlin\\leafletmap\\Plugin.php',
+  'RedMarlin\\LeafletMap\\Components\\LeafletMap' => 'plugins\\redmarlin\\leafletmap\\components\\LeafletMap.php',
 );

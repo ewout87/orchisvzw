@@ -11,10 +11,10 @@ tabs:
     fields:
         description:
             label: Description
-            size: ''
-            span: auto
+            size: large
+            span: left
             type: richeditor
-            tab: 'Tab 1'
+            tab: Information
         images:
             label: Images
             mode: file
@@ -24,16 +24,19 @@ tabs:
                 extension: auto
             span: auto
             type: fileupload
-            tab: 'Tab 1'
-secondaryTabs:
-    fields:
-        manager:
-            label: Manager
-            span: auto
-            type: text
-            tab: Manage
+            tab: Information
         location:
             label: Location
             span: auto
             type: text
-            tab: Manage
+            tab: Location
+        latitude:
+            label: Latitude
+            span: auto
+            type: text
+            tab: Location
+        longitude:
+            label: Longitude
+            span: auto
+            type: text
+            tab: Location
